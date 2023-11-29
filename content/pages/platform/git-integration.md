@@ -22,7 +22,13 @@ You can deploy projects to Cloudflare Pages from your open-source team, company,
 
 ### GitHub
 
-When authorizing Cloudflare Pages to access a GitHub account, you can specify access to your individual account or an organization that you belong to on GitHub. In order to be able to add the Cloudflare Pages installation to that organization, your user account must be an owner or have the appropriate role within the organization (that is, the GitHub Apps Manager role). More information on these roles can be seen on [GitHub's documentation](https://docs.github.com/en/organizations/managing-peoples-access-to-your-organization-with-roles/roles-in-an-organization#github-app-managers).
+A Github account should only point to one Cloudflare Pages account, independent of which Cloudflare user/member is interacting with that account. So it would not be possible for example to link the same GitHub account to a Dev and a Prod Cloudflare account at the same time, but would be possible for multiple Cloudflare account members to interact with it once linked. 
+
+{{<Aside type="note">}}
+
+Create React App uses the prefix `REACT_APP_` to designate environment variables that are accessible to front-end JavaScript code. A different framework will use a different prefix to expose environment variables. For example, in the case of Next.js, the prefix is `NEXT_PUBLIC_`. Consult the documentation of your front-end framework to determine how to access environment variables from your React code.
+
+{{</Aside>}}
 
 ### GitLab
 
